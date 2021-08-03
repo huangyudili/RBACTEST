@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.rbac.mapper.PermissionMapper">
+    <select id="query" resultType="cn.wolfcode.rbac.domain.Permission">
+        select id,name,expression from permission
+    </select>
+    <delete id="delete">delete from permission where id=#{id}</delete>
+</mapper>
